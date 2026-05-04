@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F43926B7-E48F-487A-9180-0C15A4C20B6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyControls</RootNamespace>
+    <AssemblyName>MyControls</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.69.0\lib\net462\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.69.0\lib\net462\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.69.0.3746, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Calendar.v3.1.69.0.3746\lib\net462\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.69.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.69.0\lib\net462\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp, Version=2025.1.6.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>packages\PostSharp.Redist.2025.1.6\lib\net45\PostSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=4.3.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.4.3.0\lib\net471\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.File.7.0.0\lib\net471\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Channels.8.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anmeldung.cs" />
+    <Compile Include="AuswahlDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuswahlDialog.Designer.cs">
+      <DependentUpon>AuswahlDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBox_Base.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckValidate.cs" />
+    <Compile Include="ComboBox_Base.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlRole.cs" />
+    <Compile Include="Database.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="DocumentArchiv.cs" />
+    <Compile Include="Firma.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="ICustomControl.cs" />
+    <Compile Include="Intf_WinFormsBase.cs" />
+    <Compile Include="MyCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseFieldDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyFormCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelWithLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginBase.Designer.cs">
+      <DependentUpon>LoginBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuButton.cs" />
+    <Compile Include="MaskedTextBox_Base.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyBaseWinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyCalendarDay.cs" />
+    <Compile Include="MyCalendarDayFreeAppointment.cs" />
+    <Compile Include="MyCalendarDayHighLight.cs" />
+    <Compile Include="MyCalendarDays.cs" />
+    <Compile Include="MyCalendarDrawElements.cs" />
+    <Compile Include="MyCalendarElementsLayout.cs" />
+    <Compile Include="MyCalendarHeader.cs" />
+    <Compile Include="MyCalendarItem.cs" />
+    <Compile Include="MyCalendarItems.cs" />
+    <Compile Include="MyCalendarItemState.cs" />
+    <Compile Include="MyCalendarParameters.cs" />
+    <Compile Include="MyCalendarProperties.cs" />
+    <Compile Include="MyCalendarScaleTime.cs" />
+    <Compile Include="MyCalendarUnitScaleTime.cs" />
+    <Compile Include="MyCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyFormCalendar_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyGoogleCalendar.cs" />
+    <Compile Include="MySearchComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTreeDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTreeDataGridView.Designer.cs">
+      <DependentUpon>MyTreeDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDuseCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseFieldText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseFactory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseNumericField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyEventArgs.cs" />
+    <Compile Include="MyFieldDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyNumericField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyNumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyIconArchiv.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyMaskedTextBoxDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyFieldFactory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyModusCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyDuseRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyPrintButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyPushButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchFieldData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchFieldFactory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchFieldText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchNumericField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySearchRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MySerachRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTextBox_Factory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="myPbClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="myPbSave.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyPushButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyTextBox_Text.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyFieldText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyWebseite.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PasswordManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PushButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RadioButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ResourceLoader.cs" />
+    <Compile Include="ModusCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RichTextBoxBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RowMergeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RowMergeView.Designer.cs">
+      <DependentUpon>RowMergeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupLogging.cs" />
+    <Compile Include="TerminDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextBox_Base.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="TreeGridCell.cs" />
+    <Compile Include="TreeGridColumn.cs" />
+    <Compile Include="TreeGridNode.cs" />
+    <Compile Include="TreeGridNodeExtensions.cs" />
+    <Compile Include="TreeGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeGridViewCellEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AuswahlDialog.resx">
+      <DependentUpon>AuswahlDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCalendar.resx">
+      <DependentUpon>MyFormCalendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginBase.resx">
+      <DependentUpon>LoginBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormCalendar_Base.resx">
+      <DependentUpon>MyFormCalendar_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminDialog.resx">
+      <DependentUpon>TerminDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testform.resx">
+      <DependentUpon>testform.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vorschau_ico1.ico" />
+    <None Include="Resources\Vertragvrarbeitung_ico1.ico" />
+    <None Include="Resources\Vertrag_suchen_ico1.ico" />
+    <None Include="Resources\Vertrag_ico1.ico" />
+    <None Include="Resources\Tabelle_ico1.ico" />
+    <None Include="Resources\Stammdaten_ico1.ico" />
+    <None Include="Resources\Speichern_ico1.ico" />
+    <None Include="Resources\Rechnung_ico1.ico" />
+    <None Include="Resources\Program_ico1.ico" />
+    <None Include="Resources\program_group_ico1.ico" />
+    <None Include="Resources\Prog_ico1.ico" />
+    <None Include="Resources\print_ico1.ico" />
+    <None Include="Resources\mail_gmail_ico1.ico" />
+    <None Include="Resources\Login_ico1.ico" />
+    <None Include="Resources\Kurse_ico1.ico" />
+    <None Include="Resources\Kunde_ico1.ico" />
+    <None Include="Resources\Konto_ico1.ico" />
+    <None Include="Resources\Journal_ico1.ico" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Screenshot 2025-01-04 2130302.png" />
+    <None Include="Resources\Screenshot 2025-01-04 2130301.png" />
+    <None Include="Resources\Screenshot 2025-01-04 213030.png" />
+    <None Include="Resources\S_Up_png.png" />
+    <None Include="Resources\S_Down_png.png" />
+    <None Include="Resources\rechnung1.png" />
+    <None Include="Resources\Rechnung_png.png" />
+    <None Include="Resources\Rechnung_ico.ico" />
+    <None Include="Resources\rechnung.png" />
+    <None Include="Resources\prufung1.png" />
+    <None Include="Resources\prufung.png" />
+    <None Include="Resources\Program_ico.ico" />
+    <None Include="Resources\program_group_ico.ico" />
+    <None Include="Resources\Prog_ico.ico" />
+    <None Include="Resources\print_png.png" />
+    <None Include="Resources\print_ico.ico" />
+    <None Include="Resources\pngegg.png" />
+    <None Include="Resources\pngegg%281%29.png" />
+    <None Include="Resources\notizbuch1.png" />
+    <None Include="Resources\notizbuch.png" />
+    <None Include="Resources\Mail_png.png" />
+    <None Include="Resources\mail_gmail_png.png" />
+    <None Include="Resources\mail_gmail_ico.ico" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\Login_png.png" />
+    <None Include="Resources\Login_ico.ico" />
+    <None Include="Resources\Loeschen_1.png" />
+    <None Include="Resources\Kurse_png.png" />
+    <None Include="Resources\Kurse_ico.ico" />
+    <None Include="Resources\kunde1.png" />
+    <None Include="Resources\Kunde+_png.png" />
+    <None Include="Resources\Kunde+_png.ico" />
+    <None Include="Resources\Kunde_png.png" />
+    <None Include="Resources\Kunde_ico.ico" />
+    <None Include="Resources\kunde.png" />
+    <None Include="Resources\Kosten_png.png" />
+    <None Include="Resources\Korb1.png" />
+    <None Include="Resources\1-18d38b7e.ico" />
+    <None Include="Resources\3925427-contract-document-paper-icon_111567.ico" />
+    <None Include="Resources\Abrechnung_ico.ico" />
+    <None Include="Resources\Abrechnung_png.png" />
+    <None Include="Resources\add_2_png.png" />
+    <None Include="Resources\add_png.png" />
+    <None Include="Resources\backup_ico.ico" />
+    <None Include="Resources\backup_png.png" />
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.ico" />
+    <None Include="Resources\Calendar_png.png" />
+    <None Include="Resources\Cancel_icon-icons.com_73703.png" />
+    <None Include="Resources\cart_ecommerce_shopping_verified_store_icon_227310.png" />
+    <None Include="Resources\daten-speichern.png" />
+    <None Include="Resources\Delete_png_gross.png" />
+    <None Include="Resources\Delete_png_klein.png" />
+    <None Include="Resources\document_add_256_icon-icons.com_75994.ico" />
+    <None Include="Resources\document_add_256_icon-icons.com_75994.png" />
+    <None Include="Resources\document_ico.ico" />
+    <None Include="Resources\document_png.png" />
+    <None Include="Resources\drucker.png" />
+    <None Include="Resources\Eintrag_ico.ico" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\Erde_ico.ico" />
+    <None Include="Resources\Erde_png.png" />
+    <None Include="Resources\Finanz_ico.ico" />
+    <None Include="Resources\Finanz_png.png" />
+    <None Include="Resources\Finanz_png_k.png" />
+    <None Include="Resources\Finanzen_png.png" />
+    <None Include="Resources\Google_Calendar_ico.ico" />
+    <None Include="Resources\Google_Calendar_png.png" />
+    <None Include="Resources\ICO_KUNDE.bmp" />
+    <None Include="Resources\icons8-speichern-48.png" />
+    <None Include="Resources\Abrechnung_ico1.ico" />
+    <None Include="Resources\backup_ico1.ico" />
+    <None Include="Resources\document_add_256_icon-icons.com_759941.ico" />
+    <None Include="Resources\Eintrag_ico1.ico" />
+    <None Include="Resources\Finanz_ico1.ico" />
+    <None Include="Resources\Google_Calendar_ico1.ico" />
+    <None Include="Resources\1-18d38b7e1.ico" />
+    <None Include="Resources\actions_document_print_15785.png" />
+    <None Include="Resources\file_archive_icon.png" />
+    <None Include="Resources\file_archive_icon_grau.png" />
+    <Content Include="Resources\Image_Cancel.png" />
+    <Content Include="Resources\Image.Ok.png" />
+    <None Include="Resources\istockphoto-470138360-612x612-removebg-preview.png" />
+    <None Include="Resources\Jouran_ico.ico" />
+    <None Include="Resources\Journal_ico.ico" />
+    <None Include="Resources\Journal_png.png" />
+    <None Include="Resources\Konfig_ico.ico" />
+    <None Include="Resources\Konfig_png.png" />
+    <None Include="Resources\Konfig_rad_ico.ico" />
+    <None Include="Resources\Konfig_rad_png.png" />
+    <None Include="Resources\Konto_ico.ico" />
+    <None Include="Resources\Konto_png.png" />
+    <None Include="Resources\Korb.png" />
+    <None Include="Resources\Vorschau_png.png" />
+    <None Include="Resources\Vorschau_ico.ico" />
+    <None Include="Resources\vorschau.png" />
+    <None Include="Resources\Vertragvrarbeitung_ico.ico" />
+    <None Include="Resources\Vertragverarbeitung_png.png" />
+    <None Include="Resources\vertrag1.png" />
+    <None Include="Resources\Vertrag_suchen_png.png" />
+    <None Include="Resources\Vertrag_suchen_ico.ico" />
+    <None Include="Resources\Vertrag_png.png" />
+    <None Include="Resources\Vertrag_ico.ico" />
+    <None Include="Resources\vertrag.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\Tabelle_png.png" />
+    <None Include="Resources\Tabelle_ico.ico" />
+    <None Include="Resources\suche1.png" />
+    <None Include="Resources\suche.png" />
+    <None Include="Resources\Stammdaten_ico.ico" />
+    <None Include="Resources\Speichern_png.png" />
+    <None Include="Resources\Speichern_ico.ico" />
+    <None Include="Resources\send-message_png.png" />
+    <None Include="Resources\Scroll_Up.png" />
+    <None Include="Resources\Scroll_Down.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Serilog.4.3.0\build\Serilog.targets" Condition="Exists('packages\Serilog.4.3.0\build\Serilog.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Serilog.4.3.0\build\Serilog.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Serilog.4.3.0\build\Serilog.targets'))" />
+  </Target>
+</Project>

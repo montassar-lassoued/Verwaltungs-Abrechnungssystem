@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36227.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCC-Verwaltungssystem", "FCC-Verwaltungssystem.csproj", "{BCB3479A-7B0B-4F96-B319-A8F1BF2FE95E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database-Installer", "..\Database-Installer\Database-Installer.csproj", "{8B2FFC01-E77F-4FF1-99B8-2B67BDC871EB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_Fcc-Verwaltungssystem", "..\..\FCC-Setups\Setup_Fcc-Verwaltungssystem\Setup_Fcc-Verwaltungssystem.vdproj", "{38FB8E8D-74CD-4C85-8672-C6281C6B2275}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_FCC_Database", "..\..\FCC-Setups\Setup_FCC_Database\Setup_FCC_Database.vdproj", "{66255358-D7F9-4A33-86E5-8CA5C7C2805A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCB3479A-7B0B-4F96-B319-A8F1BF2FE95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB3479A-7B0B-4F96-B319-A8F1BF2FE95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB3479A-7B0B-4F96-B319-A8F1BF2FE95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2FFC01-E77F-4FF1-99B8-2B67BDC871EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2FFC01-E77F-4FF1-99B8-2B67BDC871EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2FFC01-E77F-4FF1-99B8-2B67BDC871EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38FB8E8D-74CD-4C85-8672-C6281C6B2275}.Debug|Any CPU.ActiveCfg = Release
+		{38FB8E8D-74CD-4C85-8672-C6281C6B2275}.Debug|Any CPU.Build.0 = Release
+		{38FB8E8D-74CD-4C85-8672-C6281C6B2275}.Release|Any CPU.ActiveCfg = Release
+		{66255358-D7F9-4A33-86E5-8CA5C7C2805A}.Debug|Any CPU.ActiveCfg = Release
+		{66255358-D7F9-4A33-86E5-8CA5C7C2805A}.Debug|Any CPU.Build.0 = Release
+		{66255358-D7F9-4A33-86E5-8CA5C7C2805A}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F176F9D1-8F0B-4591-BE90-E81A6232FD25}
+	EndGlobalSection
+EndGlobal
