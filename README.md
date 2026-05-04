@@ -15,5 +15,4 @@ Das Repository ist in folgende Bereiche unterteilt:
 *   **/Hauptanwendung**: Enthält das ausführbare Programm (UI/Konsole).
 *   **/ImportierterTeil**: (Hier evtl. echten Namen einfügen) Die Logik-Library, die als Modul importiert wird.
 
-*   
-<img width="697" height="445" alt="grafik" src="https://github.com/user-attachments/assets/7f92175f-3140-4dd2-a146-e69df636b113" />
+
