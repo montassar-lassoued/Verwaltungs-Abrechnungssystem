@@ -1,6 +1,5 @@
 # Verwaltungs- & Abrechnungssystem Professional
 
-Ein modulares C#-System zur vollständigen Abwicklung von Kundenverwaltung, Rechnungsstellung und digitalem Dokumentenmanagement.
 
 ## Kernfunktionen
 
@@ -8,7 +7,7 @@ Ein modulares C#-System zur vollständigen Abwicklung von Kundenverwaltung, Rech
 * **Stammdaten:** Kunden hinzufügen, bearbeiten, archivieren und löschen.
 * **Historie:** Alle Interaktionen und Rechnungen auf einen Blick.
 * 
-### ✍️ Vertragsverwaltung (NEU)
+### ✍️ Vertragsverwaltung
 * **Erfassung:** Verwaltung von Verträgen mit Laufzeiten, Kündigungsfristen und Konditionen.
 * **Verknüpfung:** Direkte Zuordnung von Verträgen zu Kunden und automatisierten Abrechnungszyklen.
 * 
