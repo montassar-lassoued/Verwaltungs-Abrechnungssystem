@@ -1,18 +1,38 @@
-# Verwaltungs- & Abrechnungssystem
+# Verwaltungs- & Abrechnungssystem Professional
 
-Ein C#-basiertes System zur effizienten Verwaltung und Abrechnung. Dieses Projekt besteht aus einer Hauptanwendung und einer integrierten Library für die Logik-Verarbeitung.
+Ein modulares C#-System zur vollständigen Abwicklung von Kundenverwaltung, Rechnungsstellung und digitalem Dokumentenmanagement.
 
-## 🚀 Features
+## Kernfunktionen
 
-*   **Verwaltung:** Erfassung und Organisation von Datensätzen.
-*   **Abrechnung:** Automatisierte Berechnung von Beträgen.
-*   **Modularer Aufbau:** Trennung von Core-Logik und Benutzeroberfläche.
+### 👥 Kundenverwaltung
+* **Stammdaten:** Kunden hinzufügen, bearbeiten, archivieren und löschen.
+* **Historie:** Alle Interaktionen und Rechnungen auf einen Blick.
+* 
+### ✍️ Vertragsverwaltung (NEU)
+* **Erfassung:** Verwaltung von Verträgen mit Laufzeiten, Kündigungsfristen und Konditionen.
+* **Verknüpfung:** Direkte Zuordnung von Verträgen zu Kunden und automatisierten Abrechnungszyklen.
+* 
+### 📄 Rechnungswesen (Billing)
+* **Workflow:** Erstellung, Live-Vorschau, Druck und automatisierter E-Mail-Versand.
+* **Korrekturen:** Revisionssicheres Storno-System (komplett oder auf Positionsebene).
+* **Finanzübersicht:** Journal für Einnahmen/Ausgaben und Rechnungsübersichten.
 
-## 📂 Projektstruktur
+### 📁 Digitales Archiv & Dokumentenmanagement
+* **Dateianhänge:** Beliebige Dokumente (PDF, Word, Text) an Kunden oder Rechnungen hängen.
+* **Stream-File-DB:** Effiziente Speicherung großer Dateimengen direkt über die Datenbank-Logik (FileStream).
+* **Zentraler Zugriff:** Schnelles Wiederfinden von Dokumenten direkt aus dem Kontext des Kunden.
 
-Das Repository ist in folgende Bereiche unterteilt:
+### 🔐 Sicherheit & Kontrolle
+* **Rechtesystem:** Benutzerkonten mit granularen Berechtigungen (Rollenmanagement).
+* **Suche & Filter:** Globale Suchfunktionen über alle Module hinweg.
+* **Kalender & Konfiguration:** Fristenverwaltung und zentrale Systemeinstellungen.
 
-*   **/Hauptanwendung**: Enthält das ausführbare Programm (UI/Konsole).
-*   **/ImportierterTeil**: (Hier evtl. echten Namen einfügen) Die Logik-Library, die als Modul importiert wird.
+## 🛠 Technische Highlights
+* **Sprache:** C# / .NET
+* **Datenhaltung:** SQL-Anbindung mit FileStream-Unterstützung für Dokumente.
 
-
+<img width="697" height="445" alt="Screenshot 2026-05-04 190648" src="https://github.com/user-attachments/assets/c1d3d680-813c-4bfb-894d-2964970248c3" />
+# Kalenderübersicht
+<img width="1226" height="753" alt="Screenshot 2026-05-06 100536" src="https://github.com/user-attachments/assets/258f3d2d-b160-415d-8a4e-b2ab6dd8abf9" />
+# Archivübersicht
+<img width="638" height="186" alt="Screenshot 2026-05-06 103032" src="https://github.com/user-attachments/assets/c4ce6991-ae4d-4a7b-89eb-420800211622" />
