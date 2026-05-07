@@ -30,8 +30,8 @@
 * **Sprache:** C# / .NET
 * **Datenhaltung:** SQL-Anbindung mit FileStream-Unterstützung für Dokumente.
 
-<img width="697" height="445" alt="Screenshot 2026-05-04 190648" src="https://github.com/user-attachments/assets/c1d3d680-813c-4bfb-894d-2964970248c3" />
+<img width="330" height="340" alt="Screenshot 2026-05-04 190648" src="https://github.com/user-attachments/assets/c1d3d680-813c-4bfb-894d-2964970248c3" />
 # Kalenderübersicht
-<img width="326" height="353" alt="Screenshot 2026-05-06 100536" src="https://github.com/user-attachments/assets/258f3d2d-b160-415d-8a4e-b2ab6dd8abf9" />
+<img width="326" height="326" alt="Screenshot 2026-05-06 100536" src="https://github.com/user-attachments/assets/258f3d2d-b160-415d-8a4e-b2ab6dd8abf9" />
 # Archivübersicht
-<img width="338" height="186" alt="Screenshot 2026-05-06 103032" src="https://github.com/user-attachments/assets/c4ce6991-ae4d-4a7b-89eb-420800211622" />
+<img width="238" height="186" alt="Screenshot 2026-05-06 103032" src="https://github.com/user-attachments/assets/c4ce6991-ae4d-4a7b-89eb-420800211622" />
